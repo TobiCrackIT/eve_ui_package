@@ -10,7 +10,8 @@ class EveInputField extends StatelessWidget {
   final bool enabled;
   final bool password;
   final void Function()? trailingTapped;
-  final void Function(String)? onChanged;
+  final Function(String)? onFieldSubmitted;
+  final ValueChanged<String>? onChanged;
 
   final eveBorder = OutlineInputBorder(
     borderRadius: BorderRadius.circular(15),
@@ -27,6 +28,7 @@ class EveInputField extends StatelessWidget {
     this.enabled = false,
     this.password = false,
     this.onChanged,
+    this.onFieldSubmitted,
   }) : super(key: key);
 
   @override
@@ -85,6 +87,7 @@ class EveInputField extends StatelessWidget {
               ),
             ),
             onChanged: onChanged,
+            onSubmitted: onFieldSubmitted,
           ),
         ),
       ],
