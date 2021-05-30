@@ -7,11 +7,13 @@ class EveNormalLayout extends StatelessWidget {
   final Color? bgColor;
   final PreferredSizeWidget? header;
   final double horizontalPadding;
+  final Widget? fab;
 
   EveNormalLayout({
     @required this.child,
     this.header,
     this.bgColor,
+    this.fab,
     this.horizontalPadding = 15.0,
   }) : assert(child != null);
 
@@ -33,6 +35,7 @@ class EveNormalLayout extends StatelessWidget {
                 child: child,
               ),
             ),
+            floatingActionButton: fab,
           ),
         ),
       ),
