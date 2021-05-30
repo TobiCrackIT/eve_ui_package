@@ -10,7 +10,7 @@ class EveInputField extends StatelessWidget {
   final bool enabled;
   final bool password;
   final void Function()? trailingTapped;
-  final void Function(String?)? onChanged;
+  final void Function(String)? onChanged;
 
   final eveBorder = OutlineInputBorder(
     borderRadius: BorderRadius.circular(15),
