@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 import '../../eve.dart';
 
-class TaraNormalLayout extends StatelessWidget {
+class EveNormalLayout extends StatelessWidget {
   final Widget? child;
   final Color? bgColor;
   final PreferredSizeWidget? header;
   final double horizontalPadding;
 
-  TaraNormalLayout({
+  EveNormalLayout({
     @required this.child,
     this.header,
     this.bgColor,
