@@ -50,6 +50,14 @@ class EveButton extends StatelessWidget {
                 borderRadius: BorderRadius.all(
                   Radius.circular(50),
                 ),
+                boxShadow: [
+                  BoxShadow(
+                    spreadRadius: 0,
+                    blurRadius: 8,
+                    offset: Offset(0, 4),
+                    color: Color.fromRGBO(41, 29, 74, 0.15),
+                  )
+                ],
               )
             : BoxDecoration(
                 color: Colors.transparent,

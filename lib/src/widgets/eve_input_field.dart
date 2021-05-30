@@ -19,12 +19,12 @@ class EveInputField extends StatelessWidget {
   EveInputField({
     Key? key,
     required this.controller,
-    this.title='',
+    this.title = '',
     this.placeholder = '',
     this.leading,
     this.trailing,
     this.trailingTapped,
-    this.enabled=false,
+    this.enabled = false,
     this.password = false,
     this.onChanged,
   }) : super(key: key);
@@ -32,19 +32,29 @@ class EveInputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            title!,
-            style: Theme.of(context).textTheme.headline2!.copyWith(
-              fontSize: 12,
-              fontWeight: FontWeight.w500,
-              color: enabled
-                  ? kEveAliceBlue
-                  : kEveJacarta,
-            ),
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          title!,
+          style: Theme.of(context).textTheme.headline2!.copyWith(
+                fontSize: 12,
+                fontWeight: FontWeight.w500,
+                color: enabled ? kEveAliceBlue : kEveJacarta,
+              ),
+        ),
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(15)),
+            boxShadow: [
+              BoxShadow(
+                spreadRadius: 0,
+                blurRadius: 64,
+                offset: Offset(0, 7),
+                color: Color.fromRGBO(0, 0, 0, 0.07),
+              )
+            ],
           ),
-          TextField(
+          child: TextField(
             controller: controller,
             obscureText: password,
             obscuringCharacter: '●',
@@ -53,7 +63,7 @@ class EveInputField extends StatelessWidget {
               filled: true,
               fillColor: kEveAliceBlue,
               contentPadding:
-                  const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+                  const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
               prefixIcon: leading,
               suffixIcon: trailing != null
                   ? GestureDetector(
@@ -76,7 +86,8 @@ class EveInputField extends StatelessWidget {
             ),
             onChanged: onChanged,
           ),
-        ],
-      );
+        ),
+      ],
+    );
   }
 }
