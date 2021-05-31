@@ -75,6 +75,7 @@ class EveButton extends StatelessWidget {
                 children: [
                   if (leading != null) leading!,
                   if (leading != null) SizedBox(width: 5),
+                  Text('$title',style: TextStyle(color: borderColor,fontSize: 14,fontWeight: FontWeight.w700),),
                 ],
               )
             : CircularProgressIndicator(
