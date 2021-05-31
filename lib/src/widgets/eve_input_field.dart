@@ -1,4 +1,5 @@
 import 'package:eve/src/shared/app_colors.dart';
+import 'package:eve/src/shared/spacer.dart';
 import 'package:flutter/material.dart';
 
 class EveInputField extends StatelessWidget {
@@ -42,29 +43,37 @@ class EveInputField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          title!,
-          style: Theme.of(context).textTheme.headline2!.copyWith(
-                fontSize: 12,
-                fontWeight: FontWeight.w500,
-                color: enabled ? kEveCeruleanBlue : kEveJacarta,
-              ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            EveSpace.horizontalSpaceXXSmall,
+            Text(
+              title!,
+              style: Theme.of(context).textTheme.headline2!.copyWith(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
+                    color: enabled ? kEveCeruleanBlue : kEveJacarta,
+                  ),
+            ),
+          ],
         ),
+        EveSpace.verticalSpaceXSmall,
         Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(15)),
             color: kEveWhite,
-            boxShadow: [
+            /*boxShadow: [
               BoxShadow(
                 spreadRadius: 0,
                 blurRadius: 64,
                 offset: Offset(0, 7),
                 color: Color.fromRGBO(0, 0, 0, 0.07),
               )
-            ],
+            ],*/
           ),
           child: TextField(
             controller: controller,
+            onTap: focusNode!.requestFocus,
             focusNode: focusNode,
             keyboardType: keyboardType,
             maxLines: maxLines,
