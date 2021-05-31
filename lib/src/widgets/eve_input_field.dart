@@ -54,14 +54,14 @@ class EveInputField extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(15)),
             color: kEveWhite,
-            boxShadow: [
+            /*boxShadow: [
               BoxShadow(
                 spreadRadius: 0,
                 blurRadius: 64,
                 offset: Offset(0, 7),
                 color: Color.fromRGBO(0, 0, 0, 0.07),
               )
-            ],
+            ],*/
           ),
           child: TextField(
             controller: controller,
