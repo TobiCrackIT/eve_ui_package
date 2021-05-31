@@ -53,6 +53,7 @@ class EveInputField extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(15)),
+            color: kEveWhite,
             boxShadow: [
               BoxShadow(
                 spreadRadius: 0,
