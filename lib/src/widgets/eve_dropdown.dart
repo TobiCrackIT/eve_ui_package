@@ -22,14 +22,21 @@ class EveDropdown extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            title!,
-            style: Theme.of(context).textTheme.headline2!.copyWith(
-              fontSize: 12,
-              fontWeight: FontWeight.w500,
-              color: kEveJacarta,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              EveSpace.horizontalSpaceXSmall,
+              Text(
+                title!,
+                style: Theme.of(context).textTheme.headline2!.copyWith(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w500,
+                  color:kEveJacarta,
+                ),
+              ),
+            ],
           ),
+          EveSpace.verticalSpaceXSmall,
           Container(
             decoration: BoxDecoration(
               color: kEveAliceBlue,
