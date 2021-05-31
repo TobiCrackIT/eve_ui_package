@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 class EveInputField extends StatelessWidget {
   final TextEditingController controller;
+  final FocusNode? focusNode;
   final TextInputType keyboardType;
   final int maxLines;
   final String? title;
@@ -22,6 +23,7 @@ class EveInputField extends StatelessWidget {
   EveInputField({
     Key? key,
     required this.controller,
+    this.focusNode,
     this.keyboardType:TextInputType.text,
     this.maxLines:1,
     this.title = '',
@@ -45,7 +47,7 @@ class EveInputField extends StatelessWidget {
           style: Theme.of(context).textTheme.headline2!.copyWith(
                 fontSize: 12,
                 fontWeight: FontWeight.w500,
-                color: enabled ? kEveAliceBlue : kEveJacarta,
+                color: enabled ? kEveCeruleanBlue : kEveJacarta,
               ),
         ),
         Container(
@@ -62,6 +64,7 @@ class EveInputField extends StatelessWidget {
           ),
           child: TextField(
             controller: controller,
+            focusNode: focusNode,
             keyboardType: keyboardType,
             maxLines: maxLines,
             obscureText: password,
