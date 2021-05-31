@@ -22,37 +22,44 @@ class EveDropdown extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            title!,
-            style: Theme.of(context).textTheme.headline2!.copyWith(
-              fontSize: 12,
-              fontWeight: FontWeight.w500,
-              color: kEveJacarta,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              EveSpace.horizontalSpaceXSmall,
+              Text(
+                title!,
+                style: Theme.of(context).textTheme.headline2!.copyWith(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w500,
+                  color:kEveJacarta,
+                ),
+              ),
+            ],
           ),
+          EveSpace.verticalSpaceXSmall,
           Container(
             decoration: BoxDecoration(
               color: kEveAliceBlue,
               borderRadius: BorderRadius.all(Radius.circular(15)),
               border:
-                  Border.all(color: Color.fromRGBO(148, 142, 165, 0.15), width: 1),
-              boxShadow: [
+                  Border.all(color: kEveAliceBlue, width: 1),
+              /*boxShadow: [
                 BoxShadow(
                   spreadRadius: 0,
                   blurRadius: 64,
                   offset: Offset(0, 7),
                   color: Color.fromRGBO(0, 0, 0, 0.07),
                 )
-              ],
+              ],*/
             ),
-            padding: EdgeInsets.only(left: 4.0, top: 3, bottom: 3),
+            padding: EdgeInsets.only(left: 16.0,),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Expanded(
                   child: Container(
                     child: DropdownButton(
-                      focusColor: Theme.of(context).colorScheme.primary,
+                      focusColor: kEveCeruleanBlue,
                       isExpanded: true,
                       hint: Text(
                         title!,

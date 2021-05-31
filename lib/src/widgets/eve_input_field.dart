@@ -46,7 +46,7 @@ class EveInputField extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            EveSpace.horizontalSpaceXXSmall,
+            EveSpace.horizontalSpaceXSmall,
             Text(
               title!,
               style: Theme.of(context).textTheme.headline2!.copyWith(
