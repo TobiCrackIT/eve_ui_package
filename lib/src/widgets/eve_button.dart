@@ -78,10 +78,13 @@ class EveButton extends StatelessWidget {
                   Text('$title',style: TextStyle(color: borderColor,fontSize: 14,fontWeight: FontWeight.w700),),
                 ],
               )
-            : CircularProgressIndicator(
-                strokeWidth: 4,
-                valueColor: AlwaysStoppedAnimation(borderColor!),
-              ),
+            : Padding(
+              padding: const EdgeInsets.symmetric(vertical: 4),
+              child: CircularProgressIndicator(
+                  strokeWidth: 3,
+                  valueColor: AlwaysStoppedAnimation(borderColor!),
+                ),
+            ),
       ),
     );
   }
