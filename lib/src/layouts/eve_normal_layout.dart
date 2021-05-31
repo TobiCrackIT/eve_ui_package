@@ -28,6 +28,7 @@ class EveNormalLayout extends StatelessWidget {
             backgroundColor: bgColor,
             appBar: header,
             body: Container(
+              color: bgColor,
               height: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
               child: SingleChildScrollView(
