@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 const Color kEveAliceBlue = Color(0xffF9FBFF);
 const Color kEveBlack=Color(0xff000000);
 const Color kEveBlue=Color(0xff0000FF);
+const Color kEveBorder=Color.fromRGBO(148, 142, 165, 0.15);
 const Color kEveCeruleanBlue = Color(0xff1949D8);
 const Color kEveDimGrey = Color(0xff786F6F);
 const Color kEveGreen=Color(0xff00FF00);

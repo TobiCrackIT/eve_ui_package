@@ -80,10 +80,13 @@ class EveButton extends StatelessWidget {
               )
             : Padding(
               padding: const EdgeInsets.symmetric(vertical: 8),
-              child: CircularProgressIndicator(
-                  strokeWidth: 3,
-                  valueColor: AlwaysStoppedAnimation(borderColor!),
-                ),
+              child: SizedBox(
+                height: 20,width: 20,
+                child: CircularProgressIndicator(
+                    strokeWidth: 3,
+                    valueColor: AlwaysStoppedAnimation(borderColor!),
+                  ),
+              ),
             ),
       ),
     );

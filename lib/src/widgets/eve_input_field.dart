@@ -93,13 +93,13 @@ class EveInputField extends StatelessWidget {
                     )
                   : null,
               border: eveBorder.copyWith(
-                borderSide: BorderSide(color: kEveAliceBlue),
+                borderSide: BorderSide(color: kEveBorder),
               ),
               disabledBorder: eveBorder.copyWith(
-                borderSide: BorderSide(color: kEveAliceBlue),
+                borderSide: BorderSide(color: kEveBorder),
               ),
               enabledBorder: eveBorder.copyWith(
-                borderSide: BorderSide(color: kEveAliceBlue),
+                borderSide: BorderSide(color: kEveBorder),
               ),
               focusedBorder: eveBorder.copyWith(
                 borderSide: BorderSide(color: kEveCeruleanBlue),
