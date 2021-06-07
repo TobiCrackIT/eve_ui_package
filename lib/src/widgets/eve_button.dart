@@ -38,7 +38,7 @@ class EveButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: disabled ? () {} : onTap,
       child: AnimatedContainer(
         width: double.infinity,
         height: 48,
@@ -75,19 +75,26 @@ class EveButton extends StatelessWidget {
                 children: [
                   if (leading != null) leading!,
                   if (leading != null) SizedBox(width: 5),
-                  Text('$title',style: TextStyle(color: borderColor,fontSize: 14,fontWeight: FontWeight.w700),),
+                  Text(
+                    '$title',
+                    style: TextStyle(
+                        color: borderColor,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w700),
+                  ),
                 ],
               )
             : Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8),
-              child: SizedBox(
-                height: 20,width: 20,
-                child: CircularProgressIndicator(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: SizedBox(
+                  height: 20,
+                  width: 20,
+                  child: CircularProgressIndicator(
                     strokeWidth: 3,
                     valueColor: AlwaysStoppedAnimation(borderColor!),
                   ),
+                ),
               ),
-            ),
       ),
     );
   }
