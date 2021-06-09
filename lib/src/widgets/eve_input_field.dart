@@ -1,6 +1,7 @@
 import 'package:eve/src/shared/app_colors.dart';
 import 'package:eve/src/shared/spacer.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class EveInputField extends StatelessWidget {
   final TextEditingController controller;
@@ -12,6 +13,7 @@ class EveInputField extends StatelessWidget {
   final Widget? leading;
   final Widget? trailing;
   final bool enabled;
+  final List<TextInputFormatter>? inputFormatter;
   final bool password;
   final void Function()? trailingTapped;
   final Function(String)? onFieldSubmitted;
@@ -32,6 +34,7 @@ class EveInputField extends StatelessWidget {
     this.leading,
     this.trailing,
     this.trailingTapped,
+    this.inputFormatter,
     this.enabled = false,
     this.password = false,
     this.onChanged,
@@ -73,6 +76,7 @@ class EveInputField extends StatelessWidget {
           ),
           child: TextField(
             controller: controller,
+            inputFormatters: inputFormatter,
             onTap: focusNode!.requestFocus,
             focusNode: focusNode,
             keyboardType: keyboardType,
