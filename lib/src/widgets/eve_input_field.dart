@@ -27,8 +27,8 @@ class EveInputField extends StatelessWidget {
     Key? key,
     required this.controller,
     this.focusNode,
-    this.keyboardType:TextInputType.text,
-    this.maxLines:1,
+    this.keyboardType: TextInputType.text,
+    this.maxLines: 1,
     this.title = '',
     this.placeholder = '',
     this.leading,
@@ -89,8 +89,8 @@ class EveInputField extends StatelessWidget {
               fillColor: kEveAliceBlue,
               contentPadding:
                   const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-              prefixIcon: leading,
-              suffixIcon: trailing != null
+              prefix: leading,
+              suffix: trailing != null
                   ? GestureDetector(
                       onTap: trailingTapped,
                       child: trailing,
