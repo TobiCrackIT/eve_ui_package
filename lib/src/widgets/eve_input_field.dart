@@ -90,10 +90,13 @@ class EveInputField extends StatelessWidget {
               contentPadding:
                   const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
               //prefix: leading,
-              prefixIcon: Padding(
-                padding: const EdgeInsets.only(right: 4,left: 8,top: 16,bottom: 16),
-                child: leading,
-              ),
+              prefix: leading != null
+                  ? Padding(
+                      padding: const EdgeInsets.only(
+                          right: 4, left: 8, top: 16, bottom: 16),
+                      child: leading,
+                    )
+                  : EveSpace.horizontalSpaceLine,
 
               suffix: trailing != null
                   ? GestureDetector(
