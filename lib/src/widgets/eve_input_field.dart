@@ -89,7 +89,12 @@ class EveInputField extends StatelessWidget {
               fillColor: kEveAliceBlue,
               contentPadding:
                   const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-              prefix: leading,
+              //prefix: leading,
+              prefixIcon: Padding(
+                padding: const EdgeInsets.only(right: 4,left: 8,top: 16,bottom: 16),
+                child: leading,
+              ),
+
               suffix: trailing != null
                   ? GestureDetector(
                       onTap: trailingTapped,
