@@ -93,7 +93,7 @@ class EveInputField extends StatelessWidget {
               prefix: leading != null
                   ? Padding(
                       padding: const EdgeInsets.only(
-                          right: 4, left: 8, top: 16, bottom: 16),
+                          right: 4, left: 6,),
                       child: leading,
                     )
                   : EveSpace.horizontalSpaceLine,
