@@ -13,6 +13,7 @@ class EveInputField extends StatelessWidget {
   final Widget? leading;
   final Widget? trailing;
   final bool enabled;
+  final bool editable;
   final List<TextInputFormatter>? inputFormatter;
   final bool password;
   final void Function()? trailingTapped;
@@ -34,6 +35,7 @@ class EveInputField extends StatelessWidget {
     this.leading,
     this.trailing,
     this.trailingTapped,
+    this.editable=true,
     this.inputFormatter,
     this.enabled = false,
     this.password = false,
@@ -76,6 +78,7 @@ class EveInputField extends StatelessWidget {
           ),
           child: TextField(
             controller: controller,
+            enabled: editable,
             inputFormatters: inputFormatter,
             onTap: focusNode!.requestFocus,
             focusNode: focusNode,
