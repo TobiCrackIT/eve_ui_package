@@ -48,7 +48,7 @@ class EveButton extends StatelessWidget {
             ? BoxDecoration(
                 color: !disabled ? bgColor! : bgColor!.withOpacity(0.3),
                 borderRadius: BorderRadius.all(
-                  Radius.circular(50),
+                  Radius.circular(borderRadius),
                 ),
                 boxShadow: [
                   BoxShadow(
@@ -62,7 +62,7 @@ class EveButton extends StatelessWidget {
             : BoxDecoration(
                 color: Colors.transparent,
                 borderRadius: BorderRadius.all(
-                  Radius.circular(50),
+                  Radius.circular(borderRadius),
                 ),
                 border: Border.all(
                   width: 1,
